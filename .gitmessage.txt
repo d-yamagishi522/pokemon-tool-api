@@ -1,0 +1,16 @@
+# ==== format ====
+# :emoji: subject(修正内容) #issue番号
+#
+# 理由: reason for subject.
+
+# 🐛 :bug:          バグ修正
+# 👍 :+1:           機能改善/変更
+# ✨ :sparkles:     部分的な機能追加
+# ♻️ :recycle:      リファクタリング
+# 🙆 :ok_woman:     マージコンフリクトのコミット
+# 🚧 :construction: 作業中
+# 🚿 :shower:       不要な機能・使われなくなった機能の削除
+# 💚 :green_heart:  テストやCIの修正・改善
+# 👕 :shirt:        lintエラーの修正やコードスタイルの修正
+# 🆙 :up:           依存パッケージなどのアップデート
+# 👮 :cop:          セキュリティ関連の改善
