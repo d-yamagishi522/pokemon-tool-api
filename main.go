@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
+	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
+)
 
 func main() {
-	fmt.Println("hello, world")
+	database := db.Init()
+	database.AutoMigrate(
+		&pokemon.Pokemon{},
+	)
+	p := []*pokemon.Pokemon{}
+	database.Model(&p).Find(&p)
 }

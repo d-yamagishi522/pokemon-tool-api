@@ -1,0 +1,4 @@
+# DB関連
+export DATABASE_URL=postgres://yamagishidaichi:@localhost:5432/pokemon-db
+export SSL_MODE="?sslmode=disable"
+export DB_LOGMODE=false
