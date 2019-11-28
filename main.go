@@ -2,7 +2,9 @@ package main
 
 import (
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
+	mid "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/middleware"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
 	pokemonC "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/controller"
 	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
@@ -12,6 +14,7 @@ import (
 func main() {
 	e := echo.New()
 
+	e.Use(middleware.CORSWithConfig(mid.CORSMiddleware()))
 	database := db.Init()
 	database.AutoMigrate(
 		&pokemon.Pokemon{},
