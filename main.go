@@ -3,12 +3,14 @@ package main
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
 	mid "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/middleware"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
 	pokemonC "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/controller"
 	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
 	pokemonU "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/usecase"
+	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonattribute"
 )
 
 func main() {
@@ -18,6 +20,8 @@ func main() {
 	database := db.Init()
 	database.AutoMigrate(
 		&pokemon.Pokemon{},
+		&attribute.Attribute{},
+		&pokemonattribute.PokemonAttribute{},
 	)
 	pokemonRepo := pokemonR.NewPokemonRepository(database)
 	pokemonUse := pokemonU.NewPokemonUsecase(
