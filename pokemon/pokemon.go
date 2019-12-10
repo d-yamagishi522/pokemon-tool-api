@@ -11,10 +11,17 @@ type Pokemon struct {
 	Name string    `json:"name"`
 }
 
-// Response struct
-type Response struct {
+// Data struct
+type Data struct {
 	ID         uuid.UUID             `json:"id"`
 	Name       string                `json:"name"`
 	Attributes []attribute.Attribute `json:"types"`
-	Weak       []attribute.Attribute `json:"weaks"`
+	Weaks      []attribute.Attribute `json:"weaks"`
+}
+
+// Request struct
+type Request struct {
+	Name       string                `json:"name"`
+	Attributes []attribute.Attribute `json:"types"`
+	Weaks      []attribute.Attribute `json:"weaks"`
 }
