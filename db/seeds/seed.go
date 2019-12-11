@@ -8,7 +8,6 @@ import (
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db/seeds/sql"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonattribute"
 )
 
 var odb *gorm.DB
@@ -20,13 +19,11 @@ func main() {
 	odb.DropTableIfExists(
 		&pokemon.Pokemon{},
 		&attribute.Attribute{},
-		&pokemonattribute.PokemonAttribute{},
 	)
 
 	odb.AutoMigrate(
 		&pokemon.Pokemon{},
 		&attribute.Attribute{},
-		&pokemonattribute.PokemonAttribute{},
 	)
 
 	var wait sync.WaitGroup
