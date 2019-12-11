@@ -23,6 +23,7 @@ func NewPokemonController(
 		pokemonUsecase: pokemon,
 	}
 	e.GET("/pokemon/:id", handler.GetByID)
+	e.GET("/pokemon", handler.List)
 	e.POST("/pokemon", handler.Create)
 }
 
@@ -42,4 +43,10 @@ func (p *PokemonController) Create(ctx echo.Context) error {
 	_ = p.pokemonUsecase.Create(payload)
 
 	return ctx.NoContent(http.StatusNoContent)
+}
+
+// List return pokemon data list
+func (p *PokemonController) List(ctx echo.Context) error {
+	res, _ := p.pokemonUsecase.List()
+	return ctx.JSON(http.StatusOK, res)
 }

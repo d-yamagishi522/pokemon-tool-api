@@ -21,6 +21,7 @@ func NewPokemonRepository(db *gorm.DB) PokemonRepository {
 type PokemonRepository interface {
 	GetByID(id uuid.UUID) (*pokemon.Pokemon, error)
 	Create(payload pokemon.Pokemon) error
+	List() ([]*pokemon.Pokemon, error)
 }
 
 func (p *pokemonRepository) GetByID(id uuid.UUID) (*pokemon.Pokemon, error) {
@@ -38,4 +39,13 @@ func (p *pokemonRepository) Create(payload pokemon.Pokemon) error {
 		return err
 	}
 	return nil
+}
+
+func (p *pokemonRepository) List() ([]*pokemon.Pokemon, error) {
+	list := []*pokemon.Pokemon{}
+	err := p.Conn.Model(&list).Find(&list).Error
+	if err != nil {
+		return nil, err
+	}
+	return list, nil
 }

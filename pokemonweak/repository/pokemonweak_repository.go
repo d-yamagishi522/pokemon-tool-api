@@ -2,6 +2,7 @@ package repository
 
 import (
 	"github.com/jinzhu/gorm"
+	uuid "github.com/satori/go.uuid"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
 )
 
@@ -19,6 +20,7 @@ func NewPokemonWeakRepository(db *gorm.DB) PokemonWeakRepository {
 // PokemonWeakRepository interface
 type PokemonWeakRepository interface {
 	Create(payload pokemonweak.PokemonWeak) error
+	ListByID(id uuid.UUID) ([]pokemonweak.PokemonWeak, error)
 }
 
 func (p *pokemonWeakRepository) Create(payload pokemonweak.PokemonWeak) error {
@@ -27,4 +29,13 @@ func (p *pokemonWeakRepository) Create(payload pokemonweak.PokemonWeak) error {
 		return err
 	}
 	return nil
+}
+
+func (p *pokemonWeakRepository) ListByID(id uuid.UUID) ([]pokemonweak.PokemonWeak, error) {
+	list := []pokemonweak.PokemonWeak{}
+	err := p.Conn.Model(&list).Where("pokemon_id = ?", id).Find(&list).Error
+	if err != nil {
+		return nil, err
+	}
+	return list, nil
 }
