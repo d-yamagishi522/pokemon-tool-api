@@ -13,8 +13,6 @@ import (
 	pokemonC "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/controller"
 	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
 	pokemonU "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/usecase"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonattribute"
-	pokemonAttributeR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonattribute/repository"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
 	pokemonWeakR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak/repository"
 )
@@ -27,14 +25,11 @@ func main() {
 	database.AutoMigrate(
 		&pokemon.Pokemon{},
 		&attribute.Attribute{},
-		&pokemonattribute.PokemonAttribute{},
 		&pokemonweak.PokemonWeak{},
 	)
 	pokemonRepo := pokemonR.NewPokemonRepository(database)
-	pokemonAttributeRepo := pokemonAttributeR.NewPokemonAttributeRepository(database)
 	pokemonWeakRepo := pokemonWeakR.NewPokemonWeakRepository(database)
 	pokemonUse := pokemonU.NewPokemonUsecase(
-		pokemonAttributeRepo,
 		pokemonWeakRepo,
 		pokemonRepo,
 	)

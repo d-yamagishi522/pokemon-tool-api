@@ -7,8 +7,10 @@ import (
 
 // Pokemon struct
 type Pokemon struct {
-	ID   uuid.UUID `json:"id"`
-	Name string    `json:"name"`
+	ID    uuid.UUID `json:"id"`
+	Name  string    `json:"name"`
+	Type1 string    `json:"type1"`
+	Type2 *string   `json:"type2"`
 }
 
 // Data struct
@@ -21,7 +23,8 @@ type Data struct {
 
 // Request struct
 type Request struct {
-	Name       string                `json:"name"`
-	Attributes []attribute.Attribute `json:"types"`
-	Weaks      []attribute.Attribute `json:"weaks"`
+	Name  string                `json:"name"`
+	Type1 string                `json:"type1"`
+	Type2 *string               `json:"type2"`
+	Weaks []attribute.Attribute `json:"weaks"`
 }
