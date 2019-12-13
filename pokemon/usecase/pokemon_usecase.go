@@ -16,6 +16,7 @@ type pokemonUsecase struct {
 type PokemonUsecase interface {
 	GetByID(id uuid.UUID) (*pokemon.Pokemon, error)
 	Create(payload []*pokemon.Request) error
+	List() ([]*pokemon.Data, error)
 }
 
 // NewPokemonUsecase mount pokemonUsecase
