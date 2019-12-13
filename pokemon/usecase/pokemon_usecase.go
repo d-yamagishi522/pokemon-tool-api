@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	uuid "github.com/satori/go.uuid"
+	"github.com/gofrs/uuid"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
 	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
 	pokemonWeakR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak/repository"

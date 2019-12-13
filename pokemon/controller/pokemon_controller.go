@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
+	"github.com/gofrs/uuid"
 	"github.com/labstack/echo"
-	uuid "github.com/satori/go.uuid"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/usecase"
 )
