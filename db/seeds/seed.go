@@ -3,6 +3,8 @@ package main
 import (
 	"sync"
 
+	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
+
 	"github.com/jinzhu/gorm"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
@@ -19,19 +21,32 @@ func main() {
 	odb.DropTableIfExists(
 		&pokemon.Pokemon{},
 		&attribute.Attribute{},
+		&pokemonweak.PokemonWeak{},
 	)
 
 	odb.AutoMigrate(
 		&pokemon.Pokemon{},
 		&attribute.Attribute{},
+		&pokemonweak.PokemonWeak{},
 	)
 
 	var wait sync.WaitGroup
-	wait.Add(1)
+	wait.Add(3)
 
 	go func() {
 		odb.DB().Exec(sql.InsertMockAttribute)
 		wait.Done()
 	}()
+
+	go func() {
+		odb.DB().Exec(sql.InsertMockPokemon)
+		wait.Done()
+	}()
+
+	go func() {
+		odb.DB().Exec(sql.InsertMockPokemonWeak)
+		wait.Done()
+	}()
+
 	wait.Wait()
 }
