@@ -1,6 +1,6 @@
 package pokemonweak
 
-import uuid "github.com/satori/go.uuid"
+import "github.com/gofrs/uuid"
 
 // PokemonWeak struct
 type PokemonWeak struct {

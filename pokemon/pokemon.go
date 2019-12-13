@@ -1,7 +1,7 @@
 package pokemon
 
 import (
-	uuid "github.com/satori/go.uuid"
+	"github.com/gofrs/uuid"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
 )
 
@@ -11,6 +11,7 @@ type Pokemon struct {
 	Name  string    `json:"name"`
 	Type1 string    `json:"type1"`
 	Type2 *string   `json:"type2"`
+	// Sort  int       `json:"sort"`
 }
 
 // Data struct

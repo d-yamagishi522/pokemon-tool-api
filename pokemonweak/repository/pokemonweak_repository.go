@@ -1,8 +1,8 @@
 package repository
 
 import (
+	"github.com/gofrs/uuid"
 	"github.com/jinzhu/gorm"
-	uuid "github.com/satori/go.uuid"
 	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
 )
 

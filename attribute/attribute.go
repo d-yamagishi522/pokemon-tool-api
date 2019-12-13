@@ -1,6 +1,6 @@
 package attribute
 
-import uuid "github.com/satori/go.uuid"
+import "github.com/gofrs/uuid"
 
 // Attribute struct
 type Attribute struct {
