@@ -11,7 +11,7 @@ type Pokemon struct {
 	Name  string    `json:"name"`
 	Type1 string    `json:"type1"`
 	Type2 *string   `json:"type2"`
-	// Sort  int       `json:"sort"`
+	Rank  *int      `json:"rank"`
 }
 
 // Data struct
