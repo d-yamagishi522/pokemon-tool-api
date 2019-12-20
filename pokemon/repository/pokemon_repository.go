@@ -43,7 +43,7 @@ func (p *pokemonRepository) Create(payload pokemon.Pokemon) error {
 
 func (p *pokemonRepository) List() ([]*pokemon.Pokemon, error) {
 	list := []*pokemon.Pokemon{}
-	err := p.Conn.Model(&list).Find(&list).Error
+	err := p.Conn.Model(&list).Order("rank asc").Find(&list).Error
 	if err != nil {
 		return nil, err
 	}
