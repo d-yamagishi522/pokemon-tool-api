@@ -1,1 +1,1 @@
-web: pokemon-tool-api
+web: go run main.go
