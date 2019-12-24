@@ -1,1 +1,1 @@
-web: pokemon-tool-api
+web: bin/pokemon-tool-api
