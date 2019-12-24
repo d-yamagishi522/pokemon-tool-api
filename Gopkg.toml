@@ -38,4 +38,4 @@
   unused-packages = true
 
 [metadata.heroku]
-  root-package = "github.com/jyouj/qiita-airline"
+  root-package = "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api"
