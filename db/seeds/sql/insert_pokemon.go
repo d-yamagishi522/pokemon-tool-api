@@ -39,6 +39,7 @@ INSERT INTO "pokemons"("id","name","type1","type2","rank") VALUES
 ('462331c1-afab-4d8a-ac53-ebdcfc00a75a','ナマコブシ','みず',NULL,NULL),
 ('46df8cf3-2b33-477c-b8e7-143ea975078f','カビゴン','ノーマル',NULL,26),
 ('4a7e6d50-8185-4279-95cd-bc0669399be8','カジリガメ','みず','いわ',NULL),
+('d61dc2bf-1519-4d78-8325-92170d5f2900','ギガイアス','いわ',NULL,NULL),
 ('4afa9e91-61a1-4f1c-9da9-f96468109dc3','ブースター','ほのお',NULL,NULL),
 ('4ce0b088-b80c-46aa-b64c-807c885de3db','ネギガナイト','かくとう',NULL,NULL),
 ('4d2f2fd9-8725-4b3a-bbc5-719022061840','ドラピオン','どく','あく',NULL),
