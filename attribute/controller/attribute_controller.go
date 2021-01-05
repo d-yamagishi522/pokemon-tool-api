@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute/usecase"
+	"pokemon-tool-api/attribute/usecase"
 )
 
 // AttributeController struct

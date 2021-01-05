@@ -1,20 +1,21 @@
 package main
 
 import (
+	"pokemon-tool-api/attribute"
+	attributeC "pokemon-tool-api/attribute/controller"
+	attributeR "pokemon-tool-api/attribute/repository"
+	attributeU "pokemon-tool-api/attribute/usecase"
+	"pokemon-tool-api/db"
+	mid "pokemon-tool-api/middleware"
+	"pokemon-tool-api/pokemon"
+	pokemonC "pokemon-tool-api/pokemon/controller"
+	pokemonR "pokemon-tool-api/pokemon/repository"
+	pokemonU "pokemon-tool-api/pokemon/usecase"
+	"pokemon-tool-api/pokemonweak"
+	pokemonWeakR "pokemon-tool-api/pokemonweak/repository"
+
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
-	attributeC "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute/controller"
-	attributeR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute/repository"
-	attributeU "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute/usecase"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
-	mid "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/middleware"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
-	pokemonC "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/controller"
-	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
-	pokemonU "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/usecase"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
-	pokemonWeakR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak/repository"
 )
 
 func main() {

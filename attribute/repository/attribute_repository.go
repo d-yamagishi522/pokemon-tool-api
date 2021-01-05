@@ -2,7 +2,7 @@ package repository
 
 import (
 	"github.com/jinzhu/gorm"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
+	"pokemon-tool-api/attribute"
 )
 
 type attributeRepository struct {

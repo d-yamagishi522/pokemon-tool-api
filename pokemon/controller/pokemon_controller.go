@@ -5,8 +5,8 @@ import (
 
 	"github.com/gofrs/uuid"
 	"github.com/labstack/echo"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/usecase"
+	"pokemon-tool-api/pokemon"
+	"pokemon-tool-api/pokemon/usecase"
 )
 
 // PokemonController struct

@@ -2,9 +2,9 @@ package usecase
 
 import (
 	"github.com/gofrs/uuid"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
-	pokemonR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon/repository"
-	pokemonWeakR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak/repository"
+	"pokemon-tool-api/pokemon"
+	pokemonR "pokemon-tool-api/pokemon/repository"
+	pokemonWeakR "pokemon-tool-api/pokemonweak/repository"
 )
 
 type pokemonUsecase struct {

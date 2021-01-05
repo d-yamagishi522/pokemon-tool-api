@@ -2,8 +2,8 @@ package usecase
 
 import (
 	"github.com/gofrs/uuid"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
+	"pokemon-tool-api/pokemon"
+	"pokemon-tool-api/pokemonweak"
 )
 
 func (pu *pokemonUsecase) Create(payload []*pokemon.Request) error {

@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
-	attributeR "gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute/repository"
+	"pokemon-tool-api/attribute"
+	attributeR "pokemon-tool-api/attribute/repository"
 )
 
 type attributeUsecase struct {

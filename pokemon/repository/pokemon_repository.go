@@ -3,7 +3,7 @@ package repository
 import (
 	"github.com/gofrs/uuid"
 	"github.com/jinzhu/gorm"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
+	"pokemon-tool-api/pokemon"
 )
 
 type pokemonRepository struct {

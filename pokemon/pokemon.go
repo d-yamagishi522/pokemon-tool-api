@@ -2,7 +2,7 @@ package pokemon
 
 import (
 	"github.com/gofrs/uuid"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
+	"pokemon-tool-api/attribute"
 )
 
 // Pokemon struct

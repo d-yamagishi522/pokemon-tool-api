@@ -3,13 +3,13 @@ package main
 import (
 	"sync"
 
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemonweak"
+	"pokemon-tool-api/pokemonweak"
 
 	"github.com/jinzhu/gorm"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/attribute"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/db/seeds/sql"
-	"gitlab.com/pokemon-party-meta-chart/pokemon-tool-api/pokemon"
+	"pokemon-tool-api/attribute"
+	"pokemon-tool-api/db"
+	"pokemon-tool-api/db/seeds/sql"
+	"pokemon-tool-api/pokemon"
 )
 
 var odb *gorm.DB
